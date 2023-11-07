@@ -1,22 +1,27 @@
-//
-// Created by usuario on 7/11/2023.
-//
 #include <iostream>
-#include <string>
+#include <cmath>
 
 using namespace std;
 
 int main() {
+    char respuesta;
     int limit;
-    cout << "Enter the limit: ";
-    cin >> limit;
+    cout << "¿Desea agregar un limite al programa?"<< endl;
+    cout << "SI = y ; NO= n"<< endl;
+    cin >> respuesta;
+    if (respuesta == 'y'){
+        cout << "Ingrese el limite: ";
+        cin >> limit;
+    }
+    else{
+        limit = 17;
+    }
+    for (int a = 1; a <= limit; ++a) {
+        for (int b = a; b <= limit; ++b) {
+            double c = std::sqrt(a*a + b*b);
 
-    for (int i = 1; i <= limit; i++) {
-        for (int j = i; j <= limit; j++) {
-            for (int k = j; k <= limit; k++) {
-                if (i * i + j * j == k * k) {
-                    cout << i << ", " << j << ", " << k << std::endl;
-                }
+            if (c == static_cast<int>(c)) {
+                std::cout << a << ", " << b << ", " << static_cast<int>(c) << std::endl;
             }
         }
     }
