@@ -13,7 +13,7 @@ int main() {
     int limit;
 
     // Preguntamos si desea agregar un límite superior del rango del programa
-    cout << "¿Desea agregar un limite al programa?"<< endl;
+    cout << "¿Desea agregar un limite de rango al programa?"<< endl;
     cout << "SI = y ; NO= n"<< endl;
     cin >> respuesta;
 
